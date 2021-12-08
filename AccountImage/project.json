@@ -1,6 +1,6 @@
 {
   "name": "Account_media_tab",
-  "description": "빈 프로세스",
+  "description": "account_image",
   "main": "Main.xaml",
   "dependencies": {
     "UiPath.Excel.Activities": "[2.11.4]",
