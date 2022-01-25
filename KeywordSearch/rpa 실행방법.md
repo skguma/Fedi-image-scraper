@@ -38,7 +38,7 @@
 
 ![Untitled (42)](https://user-images.githubusercontent.com/71035113/150901744-5f25413e-1a6e-4666-8b08-bcdbfc336bae.png)
 
-1. 다음 항목들이 잘 실행되면 됩니다.
+4. 다음 항목들이 잘 실행되면 됩니다.
     
     1) 사진이 잘 캡쳐되는지 확인 (엑셀X)
     
