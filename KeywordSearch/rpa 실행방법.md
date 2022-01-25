@@ -1,8 +1,8 @@
 # RPA 실행방법
 
-1. [Uipath Studio 설치방법](https://uipath.tistory.com/81)을 읽고 Studio 버전을 다운로드합니다.
-2. **KeywordSearch/**[SearchKeyword.xaml](https://github.com/skguma/Fedi-image-scraper/blob/main/KeywordSearch/SearchKeyword.xaml)이 잘 열리는지 확인합니다. (이 파일이 지금 테스트 할 계정별 이미지를 수집하는 RPA 입니다.)
-3. 기본 셋팅
+### 1. [Uipath Studio 설치방법](https://uipath.tistory.com/81)을 읽고 Studio 버전을 다운로드합니다.
+### 2. **KeywordSearch/**[SearchKeyword.xaml](https://github.com/skguma/Fedi-image-scraper/blob/main/KeywordSearch/SearchKeyword.xaml)이 잘 열리는지 확인합니다. </br>(계정을 수집하고, 계정별 이미지를 수집하는 RPA)
+### 3. 기본 셋팅
 
 - Flowchart > Use browser edge: google > Sequence > Sequence > 실행 > while
     - 여기에서 조건 ctrVar은 구글 검색 결과에서 계정을 얻을 때 페이지 다운 화살표를 누르는 횟수를 관리하는 변수입니다. 
@@ -38,12 +38,12 @@
 
 ![Untitled (42)](https://user-images.githubusercontent.com/71035113/150901744-5f25413e-1a6e-4666-8b08-bcdbfc336bae.png)
 
-4. 다음 항목들이 잘 실행되면 됩니다.
+### 4. 다음 항목들이 잘 실행되면 됩니다.
     
     1) 사진이 잘 캡쳐되는지 확인 (엑셀X)
     
-    - 사진을 캡쳐할 때, 첫 번째 사진만 저장되고 두 번째 사진부터는 저장이 안 되는 오류가 발생합니다.
+        - 사진을 캡쳐할 때, 첫 번째 사진만 저장되고 두 번째 사진부터는 저장이 안 되는 오류가 발생합니다.
     
     2) 동영상이 있을 때 뒤의 사진 잘 캡쳐되는지 확인
     
-    - 사진 모아보기 탭에 동영상이 있는 경우, 화살표를 클릭해 다음 사진으로 넘기는데 오류가 나서 뒤쪽의 사진들이 잘 캡쳐되지 않습니다.
+        - 사진 모아보기 탭에 동영상이 있는 경우, 화살표를 클릭해 다음 사진으로 넘기는데 오류가 나서 뒤쪽의 사진들이 잘 캡쳐되지 않습니다.
