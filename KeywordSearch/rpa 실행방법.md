@@ -1,7 +1,7 @@
 # RPA 실행방법
 
 ### 1. [Uipath Studio 설치방법](https://uipath.tistory.com/81)을 읽고 Studio 버전을 다운로드합니다.
-### 2. **KeywordSearch/**[SearchKeyword.xaml](https://github.com/skguma/Fedi-image-scraper/blob/main/KeywordSearch/SearchKeyword.xaml)이 잘 열리는지 확인합니다. </br>(계정을 수집하고, 계정별 이미지를 수집하는 RPA)
+### 2. **KeywordSearch/**[SearchKeyword.xaml](https://github.com/skguma/Fedi-image-scraper/blob/main/KeywordSearch/SearchKeyword.xaml)과 KeywordSearch/project.json을 같은 폴더 안에 넣고 잘 열리는지 확인합니다. </br>(계정을 수집하고, 계정별 이미지를 수집하는 RPA)
 ### 3. 기본 셋팅
 
 - Flowchart > Use browser edge: google > Sequence > Sequence > 실행 > while
