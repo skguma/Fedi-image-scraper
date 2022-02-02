@@ -6,7 +6,8 @@
     "UiPath.Excel.Activities": "[2.11.4]",
     "UiPath.Mail.Activities": "[1.12.2]",
     "UiPath.System.Activities": "[21.10.2]",
-    "UiPath.UIAutomation.Activities": "[21.10.3]"
+    "UiPath.UIAutomation.Activities": "[21.10.3]",
+    "UiPathTeam.JSONUtilities.Activities": "[0.5.5]"
   },
   "webServices": [],
   "entitiesStores": [],
@@ -15,6 +16,7 @@
   "projectVersion": "1.0.0",
   "runtimeOptions": {
     "autoDispose": false,
+    "netFrameworkLazyLoading": false,
     "isPausable": true,
     "isAttended": false,
     "requiresUserInteraction": true,
