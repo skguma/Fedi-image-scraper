@@ -3,10 +3,12 @@
   "description": "빈 프로세스",
   "main": "Main.xaml",
   "dependencies": {
+    "System.Net.Http": "[4.3.4]",
     "UiPath.Excel.Activities": "[2.11.4]",
     "UiPath.Mail.Activities": "[1.12.2]",
     "UiPath.System.Activities": "[21.10.2]",
     "UiPath.UIAutomation.Activities": "[21.10.3]",
+    "UiPath.WebAPI.Activities": "[1.9.3-preview]",
     "UiPathTeam.JSONUtilities.Activities": "[0.5.5]"
   },
   "webServices": [],
