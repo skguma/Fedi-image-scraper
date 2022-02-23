@@ -1,20 +1,26 @@
 {
-  "name": "Account_media_tab",
+  "name": "빈프로세스",
   "description": "빈 프로세스",
   "main": "Main.xaml",
   "dependencies": {
+    "python": "[3.11.0-a5]",
+    "System.Net.Http": "[4.3.4]",
     "UiPath.Excel.Activities": "[2.11.4]",
     "UiPath.Mail.Activities": "[1.12.2]",
+    "UiPath.Python.Activities": "[1.6.0]",
     "UiPath.System.Activities": "[21.10.2]",
-    "UiPath.UIAutomation.Activities": "[21.10.3]"
+    "UiPath.UIAutomation.Activities": "[21.10.3]",
+    "UiPath.WebAPI.Activities": "[1.9.3-preview]",
+    "UiPathTeam.JSONUtilities.Activities": "[0.5.5]"
   },
   "webServices": [],
   "entitiesStores": [],
   "schemaVersion": "4.0",
   "studioVersion": "21.10.3.0",
-  "projectVersion": "1.0.0",
+  "projectVersion": "1.0.4",
   "runtimeOptions": {
     "autoDispose": false,
+    "netFrameworkLazyLoading": false,
     "isPausable": true,
     "isAttended": false,
     "requiresUserInteraction": true,
@@ -45,7 +51,7 @@
   "entryPoints": [
     {
       "filePath": "Main.xaml",
-      "uniqueId": "39d3ef6f-e3c3-439a-83b6-e1c1cfde542a",
+      "uniqueId": "e331f7b5-1967-4758-8afa-a2950adf4528",
       "input": [],
       "output": []
     }
