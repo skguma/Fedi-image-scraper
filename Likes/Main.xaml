@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" this:Main.InputArguments="[&quot;[{&quot;&quot;tweetUrl&quot;&quot;:&quot;&quot;https://twitter.com/fulmoon_delluna/status/1480812339393826816/retweets&quot;&quot;},{&quot;&quot;tweetUrl&quot;&quot;:&quot;&quot;https://twitter.com/yu_no_0214/status/1496076361882292224&quot;&quot;}]&quot;]" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:j="clr-namespace:JsonConverter;assembly=DataTableToJson" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:sl="clr-namespace:System.Linq;assembly=System.Core" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" this:Main.InputArguments="[&quot;[{&quot;&quot;tweetUrl&quot;&quot;:&quot;&quot;https://twitter.com/JoUbin77606985/status/1506883605615710208&quot;&quot;}]&quot;]" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:j="clr-namespace:JsonConverter;assembly=DataTableToJson" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:sl="clr-namespace:System.Linq;assembly=System.Core" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="InputArguments" Type="InArgument(x:String)" />
     <x:Property Name="OutputArguments" Type="OutArgument(x:String)" />
@@ -6,7 +6,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>777.6,701.6</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>901.6,701.6</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="52">
@@ -141,7 +141,7 @@
           <av:PointCollection x:Key="ConnectorLocation">300,204.4 300,238.4</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <Sequence sap:VirtualizedContainerService.HintSize="996.8,5352.8" sap2010:WorkflowViewState.IdRef="Sequence_2">
+      <Sequence sap:VirtualizedContainerService.HintSize="1466.4,5980" sap2010:WorkflowViewState.IdRef="Sequence_2">
         <Sequence.Variables>
           <Variable x:TypeArguments="njl:JArray" Name="jArray" />
           <Variable x:TypeArguments="x:String" Name="variable1" />
@@ -151,15 +151,15 @@
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-        <ui:DeserializeJsonArray DisplayName="Deserialize JSON Array" sap:VirtualizedContainerService.HintSize="955.2,60" sap2010:WorkflowViewState.IdRef="DeserializeJsonArray_3" JsonArray="[jArray]" JsonString="[InputArguments]" />
-        <ui:BuildDataTable DataTable="[fetchDT]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="955.2,60" sap2010:WorkflowViewState.IdRef="BuildDataTable_2" TableInfo="&lt;NewDataSet&gt;&#xD;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xD;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xD;&#xA;      &lt;xs:complexType&gt;&#xD;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xD;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xD;&#xA;            &lt;xs:complexType&gt;&#xD;&#xA;              &lt;xs:sequence&gt;&#xD;&#xA;                &lt;xs:element name=&quot;accountName&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xD;&#xA;                  &lt;xs:simpleType&gt;&#xD;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xD;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xD;&#xA;                    &lt;/xs:restriction&gt;&#xD;&#xA;                  &lt;/xs:simpleType&gt;&#xD;&#xA;                &lt;/xs:element&gt;&#xD;&#xA;                &lt;xs:element name=&quot;url&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;accountId&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;sourceId&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; /&gt;&#xD;&#xA;              &lt;/xs:sequence&gt;&#xD;&#xA;            &lt;/xs:complexType&gt;&#xD;&#xA;          &lt;/xs:element&gt;&#xD;&#xA;        &lt;/xs:choice&gt;&#xD;&#xA;      &lt;/xs:complexType&gt;&#xD;&#xA;    &lt;/xs:element&gt;&#xD;&#xA;  &lt;/xs:schema&gt;&#xD;&#xA;&lt;/NewDataSet&gt;" />
-        <ui:ForEach x:TypeArguments="njl:JObject" CurrentIndex="[index]" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="955.2,5060" sap2010:WorkflowViewState.IdRef="ForEach`1_5" Values="[jArray]">
+        <ui:DeserializeJsonArray DisplayName="Deserialize JSON Array" sap:VirtualizedContainerService.HintSize="1424.8,60" sap2010:WorkflowViewState.IdRef="DeserializeJsonArray_3" JsonArray="[jArray]" JsonString="[InputArguments]" />
+        <ui:BuildDataTable DataTable="[fetchDT]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="1424.8,60" sap2010:WorkflowViewState.IdRef="BuildDataTable_2" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;accountName&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;url&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; /&gt;&#xA;                &lt;xs:element name=&quot;accountId&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;sourceId&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;" />
+        <ui:ForEach x:TypeArguments="njl:JObject" CurrentIndex="[index]" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="1424.8,5687.2" sap2010:WorkflowViewState.IdRef="ForEach`1_5" Values="[jArray]">
           <ui:ForEach.Body>
             <ActivityAction x:TypeArguments="njl:JObject">
               <ActivityAction.Argument>
                 <DelegateInArgument x:TypeArguments="njl:JObject" Name="item" />
               </ActivityAction.Argument>
-              <Sequence DisplayName="본문" sap:VirtualizedContainerService.HintSize="920,4935.2" sap2010:WorkflowViewState.IdRef="Sequence_10">
+              <Sequence DisplayName="본문" sap:VirtualizedContainerService.HintSize="1389.6,5562.4" sap2010:WorkflowViewState.IdRef="Sequence_10">
                 <Sequence.Variables>
                   <Variable x:TypeArguments="x:Boolean" Name="result" />
                   <Variable x:TypeArguments="x:Int32" Name="retweet_flag" />
@@ -171,8 +171,8 @@
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ui:BuildDataTable DataTable="[tmpDT]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="878.4,60" sap2010:WorkflowViewState.IdRef="BuildDataTable_3" TableInfo="&lt;NewDataSet&gt;&#xD;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xD;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xD;&#xA;      &lt;xs:complexType&gt;&#xD;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xD;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xD;&#xA;            &lt;xs:complexType&gt;&#xD;&#xA;              &lt;xs:sequence&gt;&#xD;&#xA;                &lt;xs:element name=&quot;accountName&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xD;&#xA;                  &lt;xs:simpleType&gt;&#xD;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xD;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xD;&#xA;                    &lt;/xs:restriction&gt;&#xD;&#xA;                  &lt;/xs:simpleType&gt;&#xD;&#xA;                &lt;/xs:element&gt;&#xD;&#xA;                &lt;xs:element name=&quot;url&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;accountId&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;              &lt;/xs:sequence&gt;&#xD;&#xA;            &lt;/xs:complexType&gt;&#xD;&#xA;          &lt;/xs:element&gt;&#xD;&#xA;        &lt;/xs:choice&gt;&#xD;&#xA;      &lt;/xs:complexType&gt;&#xD;&#xA;    &lt;/xs:element&gt;&#xD;&#xA;  &lt;/xs:schema&gt;&#xD;&#xA;&lt;/NewDataSet&gt;" />
-                <Assign sap:VirtualizedContainerService.HintSize="878.4,60" sap2010:WorkflowViewState.IdRef="Assign_1">
+                <ui:BuildDataTable DataTable="[tmpDT]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="1348,60" sap2010:WorkflowViewState.IdRef="BuildDataTable_3" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;accountName&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;url&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;accountId&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;" />
+                <Assign sap:VirtualizedContainerService.HintSize="1348,60" sap2010:WorkflowViewState.IdRef="Assign_1">
                   <Assign.To>
                     <OutArgument x:TypeArguments="x:String">[tweetURL]</OutArgument>
                   </Assign.To>
@@ -180,7 +180,7 @@
                     <InArgument x:TypeArguments="x:String">[item("tweetUrl").ToString]</InArgument>
                   </Assign.Value>
                 </Assign>
-                <Assign sap:VirtualizedContainerService.HintSize="878.4,60" sap2010:WorkflowViewState.IdRef="Assign_2">
+                <Assign sap:VirtualizedContainerService.HintSize="1348,60" sap2010:WorkflowViewState.IdRef="Assign_2">
                   <Assign.To>
                     <OutArgument x:TypeArguments="x:String">[sourceId]</OutArgument>
                   </Assign.To>
@@ -188,13 +188,13 @@
                     <InArgument x:TypeArguments="x:String">["@" + tweetURL.Split({"/", "?"}, StringSplitOptions.RemoveEmptyEntries)(2)]</InArgument>
                   </Assign.Value>
                 </Assign>
-                <uix:NApplicationCard AttachMode="ByInstance" DisplayName="리트윗 스크래핑" sap:VirtualizedContainerService.HintSize="878.4,1559.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" InteractionMode="DebuggerApi" ScopeGuid="e07b140f-d468-41af-90e8-625d15ef5bd9" Version="V1">
+                <uix:NApplicationCard AttachMode="ByInstance" DisplayName="리트윗 스크래핑" sap:VirtualizedContainerService.HintSize="1348,1873.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" InteractionMode="DebuggerApi" ScopeGuid="e07b140f-d468-41af-90e8-625d15ef5bd9" Version="V1">
                   <uix:NApplicationCard.Body>
                     <ActivityAction x:TypeArguments="x:Object">
                       <ActivityAction.Argument>
                         <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                       </ActivityAction.Argument>
-                      <Sequence DisplayName="실행" sap:VirtualizedContainerService.HintSize="844.8,1342.4" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                      <Sequence DisplayName="실행" sap:VirtualizedContainerService.HintSize="1314.4,1656.8" sap2010:WorkflowViewState.IdRef="Sequence_6">
                         <Sequence.Variables>
                           <Variable x:TypeArguments="sd:DataTable" Default="[New System.Data.DataTable]" Name="ExtractDataTable" />
                           <Variable x:TypeArguments="x:String" Name="DefaultString" />
@@ -204,17 +204,17 @@
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <ui:MaximizeWindow Window="{x:Null}" DisplayName="Maximize Window" sap:VirtualizedContainerService.HintSize="803.2,22.4" sap2010:WorkflowViewState.IdRef="MaximizeWindow_3" />
-                        <uix:NCheckState Exists="{x:Null}" DisplayName="'리트윗' 목록 없는 경우 예외처리" sap:VirtualizedContainerService.HintSize="803.2,697.6" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="e07b140f-d468-41af-90e8-625d15ef5bd9" Timeout="10" Version="V1">
+                        <ui:MaximizeWindow Window="{x:Null}" DisplayName="Maximize Window" sap:VirtualizedContainerService.HintSize="1272.8,22.4" sap2010:WorkflowViewState.IdRef="MaximizeWindow_3" />
+                        <uix:NCheckState Exists="{x:Null}" DisplayName="Check App State 'Something went'" sap:VirtualizedContainerService.HintSize="1272.8,1010.4" sap2010:WorkflowViewState.IdRef="NCheckState_3" ScopeIdentifier="e07b140f-d468-41af-90e8-625d15ef5bd9" Version="V1">
                           <uix:NCheckState.IfExists>
-                            <Sequence DisplayName="타겟이 나타남" sap:VirtualizedContainerService.HintSize="375.2,281.6" sap2010:WorkflowViewState.IdRef="Sequence_19">
+                            <Sequence DisplayName="타겟이 나타남" sap:VirtualizedContainerService.HintSize="375.2,281.6" sap2010:WorkflowViewState.IdRef="Sequence_40">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="333.6,85.6" sap2010:WorkflowViewState.IdRef="MessageBox_5" Text="[&quot;타겟 없음&quot;]" />
-                              <Assign sap:VirtualizedContainerService.HintSize="333.6,61.6" sap2010:WorkflowViewState.IdRef="Assign_6">
+                              <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="333.6,85.6" sap2010:WorkflowViewState.IdRef="MessageBox_8" Text="[&quot;Removed tweet&quot;]" />
+                              <Assign sap:VirtualizedContainerService.HintSize="333.6,61.6" sap2010:WorkflowViewState.IdRef="Assign_10">
                                 <Assign.To>
                                   <OutArgument x:TypeArguments="x:Int32">[retweet_flag]</OutArgument>
                                 </Assign.To>
@@ -225,35 +225,67 @@
                             </Sequence>
                           </uix:NCheckState.IfExists>
                           <uix:NCheckState.IfNotExists>
-                            <Sequence DisplayName="타겟이 나타나지 않음" sap:VirtualizedContainerService.HintSize="375.2,479.2" sap2010:WorkflowViewState.IdRef="Sequence_20">
+                            <Sequence DisplayName="타겟이 나타나지 않음" sap:VirtualizedContainerService.HintSize="844.8,792" sap2010:WorkflowViewState.IdRef="Sequence_41">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[retweetDT]" DelayBefore="1" DisplayName="Extract Table Data" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column0' Name='accountName'&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column1' Name='url'&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column2' Name='accountId'&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;row exact='1'&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;/row&gt;&lt;column exact='1' name='Column0' attr='text' name2='Column1' attr2='href'&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='span' idx='1' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column2' attr='text'&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='span' idx='1' /&gt;&lt;/column&gt;&lt;/extract&gt;" ExtractSimilar="True" sap:VirtualizedContainerService.HintSize="333.6,157.6" sap2010:WorkflowViewState.IdRef="NExtractData_6" LimitExtractionTo="Rows" MaximumResults="0" ScopeIdentifier="e07b140f-d468-41af-90e8-625d15ef5bd9" Version="V1">
-                                <uix:NExtractData.Target>
-                                  <uix:TargetAnchorable BrowserURL="https://twitter.com/NordaceOfficial/status/1391597886996058113/likes" DesignTimeRectangle="594, 228, 729, 3126" FriendlyName="'RoseKim@ekwjdrla0501Fol…'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;section&amp;gt;div&amp;gt;div' parentid='layers' tag='DIV' /&gt;" Guid="3aed9d45-52f2-4542-9d90-8e9f7ff5f3ea" InformativeScreenshot="c2bef434e4114b40eab8364b25dd1d48.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='(1) Home / Twitter' /&gt;" SearchSteps="Selector" />
-                                </uix:NExtractData.Target>
-                              </uix:NExtractData>
-                              <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="333.6,85.6" sap2010:WorkflowViewState.IdRef="MessageBox_3" Text="[&quot;리트윗 스크래핑 완료&quot;]" />
-                              <Assign sap:VirtualizedContainerService.HintSize="333.6,61.6" sap2010:WorkflowViewState.IdRef="Assign_7">
-                                <Assign.To>
-                                  <OutArgument x:TypeArguments="x:Int32">[retweet_flag]</OutArgument>
-                                </Assign.To>
-                                <Assign.Value>
-                                  <InArgument x:TypeArguments="x:Int32">1</InArgument>
-                                </Assign.Value>
-                              </Assign>
+                              <uix:NCheckState Exists="{x:Null}" DisplayName="'리트윗' 목록 없는 경우 예외처리" sap:VirtualizedContainerService.HintSize="803.2,697.6" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="e07b140f-d468-41af-90e8-625d15ef5bd9" Timeout="10" Version="V1">
+                                <uix:NCheckState.IfExists>
+                                  <Sequence DisplayName="타겟이 나타남" sap:VirtualizedContainerService.HintSize="375.2,281.6" sap2010:WorkflowViewState.IdRef="Sequence_19">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="333.6,85.6" sap2010:WorkflowViewState.IdRef="MessageBox_5" Text="[&quot;No retweets&quot;]" />
+                                    <Assign sap:VirtualizedContainerService.HintSize="333.6,61.6" sap2010:WorkflowViewState.IdRef="Assign_6">
+                                      <Assign.To>
+                                        <OutArgument x:TypeArguments="x:Int32">[retweet_flag]</OutArgument>
+                                      </Assign.To>
+                                      <Assign.Value>
+                                        <InArgument x:TypeArguments="x:Int32">0</InArgument>
+                                      </Assign.Value>
+                                    </Assign>
+                                  </Sequence>
+                                </uix:NCheckState.IfExists>
+                                <uix:NCheckState.IfNotExists>
+                                  <Sequence DisplayName="타겟이 나타나지 않음" sap:VirtualizedContainerService.HintSize="375.2,479.2" sap2010:WorkflowViewState.IdRef="Sequence_20">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[retweetDT]" DelayBefore="1" DisplayName="Extract Table Data" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured'&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column0' Name='accountId'&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column1' Name='url'&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column2' Name='accountName'&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;row exact='1'&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;/row&gt;&lt;column exact='1' name='Column0' attr='text' name2='Column1' attr2='href'&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='span' idx='1' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column2' attr='text'&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='span' idx='1' /&gt;&lt;webctrl tag='span' idx='1' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="333.6,157.6" sap2010:WorkflowViewState.IdRef="NExtractData_6" MaximumResults="0" ScopeIdentifier="e07b140f-d468-41af-90e8-625d15ef5bd9" Version="V1">
+                                      <uix:NExtractData.Target>
+                                        <uix:TargetAnchorable DesignTimeRectangle="594, 228, 729, 1908" FriendlyName="'.@z85Y5jBUHXIPnPRFollow…'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;section&amp;gt;div&amp;gt;div' parentid='layers' tag='DIV' /&gt;" Guid="8f4138b8-7bad-4fe9-a456-c811b4281ddb" InformativeScreenshot="8fc1327d93e5b99ca319fbcc224c775d.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='(1) Home / Twitter' /&gt;" SearchSteps="Selector" />
+                                      </uix:NExtractData.Target>
+                                    </uix:NExtractData>
+                                    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="333.6,85.6" sap2010:WorkflowViewState.IdRef="MessageBox_3" Text="[&quot;Retweet scrapping success&quot;]" />
+                                    <Assign sap:VirtualizedContainerService.HintSize="333.6,61.6" sap2010:WorkflowViewState.IdRef="Assign_7">
+                                      <Assign.To>
+                                        <OutArgument x:TypeArguments="x:Int32">[retweet_flag]</OutArgument>
+                                      </Assign.To>
+                                      <Assign.Value>
+                                        <InArgument x:TypeArguments="x:Int32">1</InArgument>
+                                      </Assign.Value>
+                                    </Assign>
+                                  </Sequence>
+                                </uix:NCheckState.IfNotExists>
+                                <uix:NCheckState.Target>
+                                  <uix:TargetAnchorable BrowserURL="https://twitter.com/siheunghenhja/status/1479329214931546114/retweets" DesignTimeRectangle="759, 269, 75, 23" ElementType="Text" FriendlyName="'No items'" FullSelectorArgument="&lt;webctrl aaname='No items' parentid='layers' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='No items' parentid='layers' tag='SPAN' type='' check:text='No items' /&gt;" Guid="4affddb2-5678-478e-baf2-f6a76cd3e234" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAE8AAAAbCAYAAAA9K9JnAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAIiSURBVGhD7ZYxS1xBFEb9j6nthFQW2wiSQhALSRHETru0Ke3SWAXEwsI2hQQESRO0WssJZ9mP3P1y5+3bnQVdmAOPZebduffOmXniTumsTZfXQJfXQJfXQJfXQJfXQJfXwJvK+/P8Uj4eHJfd/cPy8+HXfHZ7WJB3c3dfPuxNBjfz7er7xjb7+PS7TI4+zwQiUkynr+Xk7PLdC03l8Xy5+DqfXWST8mrQxzbcxv/k0TSnjkDGTpf3j1Qev3xK/jlBTR5rdGt5srUZ3PBPp+ezT5Wc5I55ePwrYBzfey3luf5xO8utONXR31rNsyfHa2htJJVHccnwxjN5zBHLGpHNZUR5IvYRIYbYGK+5KDAeguprTusV631mNSTbD6kqD9hYJirOqSnmI1kTGavIq817Dxr7wTP2A5UYxdb2wxpfOyhPieLmXJ6PI0PvxCryslioCYgbBfrx20Mucmqt5xpiUB5QEOP8ahxjKOINCfL5aTmZkKwPbZJ8tWcT8kB75vE+IkvlKbmKvrU8j81olSeII94PRyyVB2qGxS7Px5Ghd2KsPCC2dlAR9dsqL0Iuvwij5AHJecf/gDFGjdJYZOxNWUVetgHQDZGAFnnEZDWynKPlxSvsMVnBWhNOJk+N1g4k1tdclJJtFMbIy/JlczBaHvA+kwd6p8cL1cjkgeTzaGOCcazl61vkCa+R7WdBXmc1urwGurwGurwGurwGury1KeUvCHBNtrMpZRwAAAAASUVORK5CYII=" InformativeScreenshot="cc8724b25844911b84d5f3037592e392.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Home / Twitter' /&gt;" SearchSteps="FuzzySelector" />
+                                </uix:NCheckState.Target>
+                              </uix:NCheckState>
                             </Sequence>
                           </uix:NCheckState.IfNotExists>
                           <uix:NCheckState.Target>
-                            <uix:TargetAnchorable BrowserURL="https://twitter.com/siheunghenhja/status/1479329214931546114/retweets" DesignTimeRectangle="759, 269, 75, 23" ElementType="Text" FriendlyName="'No items'" FullSelectorArgument="&lt;webctrl aaname='No items' parentid='layers' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='No items' parentid='layers' tag='SPAN' type='' check:text='No items' /&gt;" Guid="4affddb2-5678-478e-baf2-f6a76cd3e234" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAE8AAAAbCAYAAAA9K9JnAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAIiSURBVGhD7ZYxS1xBFEb9j6nthFQW2wiSQhALSRHETru0Ke3SWAXEwsI2hQQESRO0WssJZ9mP3P1y5+3bnQVdmAOPZebduffOmXniTumsTZfXQJfXQJfXQJfXQJfXQJfXwJvK+/P8Uj4eHJfd/cPy8+HXfHZ7WJB3c3dfPuxNBjfz7er7xjb7+PS7TI4+zwQiUkynr+Xk7PLdC03l8Xy5+DqfXWST8mrQxzbcxv/k0TSnjkDGTpf3j1Qev3xK/jlBTR5rdGt5srUZ3PBPp+ezT5Wc5I55ePwrYBzfey3luf5xO8utONXR31rNsyfHa2htJJVHccnwxjN5zBHLGpHNZUR5IvYRIYbYGK+5KDAeguprTusV631mNSTbD6kqD9hYJirOqSnmI1kTGavIq817Dxr7wTP2A5UYxdb2wxpfOyhPieLmXJ6PI0PvxCryslioCYgbBfrx20Mucmqt5xpiUB5QEOP8ahxjKOINCfL5aTmZkKwPbZJ8tWcT8kB75vE+IkvlKbmKvrU8j81olSeII94PRyyVB2qGxS7Px5Ghd2KsPCC2dlAR9dsqL0Iuvwij5AHJecf/gDFGjdJYZOxNWUVetgHQDZGAFnnEZDWynKPlxSvsMVnBWhNOJk+N1g4k1tdclJJtFMbIy/JlczBaHvA+kwd6p8cL1cjkgeTzaGOCcazl61vkCa+R7WdBXmc1urwGurwGurwGurwGury1KeUvCHBNtrMpZRwAAAAASUVORK5CYII=" InformativeScreenshot="cc8724b25844911b84d5f3037592e392.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Home / Twitter' /&gt;" SearchSteps="FuzzySelector" />
+                            <uix:TargetAnchorable BrowserURL="https://twitter.com/c_rev_h/status/1497119815313/retweets" DesignTimeRectangle="812, 555, 315, 23" ElementType="Text" FriendlyName="'Something went'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;span' parentid='layers' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' parentid='layers' tag='SPAN' aaname='Something went wrong. Try reloading.' check:text='Something went wrong. Try reloading.' /&gt;" Guid="98ce1511-c6b5-41ae-8638-9902398725f9" ImageBase64="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" InformativeScreenshot="9a5c348d801e34ab889aff9e11c932c4.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='(3) Home / Twitter' /&gt;" SearchSteps="FuzzySelector" />
                           </uix:NCheckState.Target>
                         </uix:NCheckState>
-                        <If Condition="[retweet_flag = 1]" sap:VirtualizedContainerService.HintSize="803.2,448.8" sap2010:WorkflowViewState.IdRef="If_2">
+                        <If Condition="[retweet_flag = 1]" sap:VirtualizedContainerService.HintSize="1272.8,449.6" sap2010:WorkflowViewState.IdRef="If_2">
                           <If.Then>
-                            <Sequence DisplayName="retweetDT가 존재하는 경우" sap:VirtualizedContainerService.HintSize="375.2,258.4" sap2010:WorkflowViewState.IdRef="Sequence_31">
+                            <Sequence DisplayName="retweetDT가 존재하는 경우" sap:VirtualizedContainerService.HintSize="375.2,259.2" sap2010:WorkflowViewState.IdRef="Sequence_31">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -261,12 +293,8 @@
                               </sap:WorkflowViewStateService.ViewState>
                               <ui:InvokeCode ContinueOnError="{x:Null}" Code="tmpDT.Merge(retweetDT)" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="333.6,164.8" sap2010:WorkflowViewState.IdRef="InvokeCode_3">
                                 <ui:InvokeCode.Arguments>
-                                  <InOutArgument x:TypeArguments="sd:DataTable" x:Key="tmpDT">
-                                    <mva:VisualBasicReference x:TypeArguments="sd:DataTable" ExpressionText="tmpDT" />
-                                  </InOutArgument>
-                                  <InArgument x:TypeArguments="sd:DataTable" x:Key="retweetDT">
-                                    <mva:VisualBasicValue x:TypeArguments="sd:DataTable" ExpressionText="retweetDT" />
-                                  </InArgument>
+                                  <InOutArgument x:TypeArguments="sd:DataTable" x:Key="tmpDT">[tmpDT]</InOutArgument>
+                                  <InArgument x:TypeArguments="sd:DataTable" x:Key="retweetDT">[retweetDT]</InArgument>
                                 </ui:InvokeCode.Arguments>
                               </ui:InvokeCode>
                             </Sequence>
@@ -293,13 +321,13 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                 </uix:NApplicationCard>
-                <uix:NApplicationCard AttachMode="ByInstance" DisplayName="좋아요 스크래핑" sap:VirtualizedContainerService.HintSize="878.4,1560.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_4" InteractionMode="DebuggerApi" ScopeGuid="e07b140f-d468-41af-90e8-625d15ef5bd9" Version="V1">
+                <uix:NApplicationCard AttachMode="ByInstance" DisplayName="좋아요 스크래핑" sap:VirtualizedContainerService.HintSize="1348,1873.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_4" InteractionMode="DebuggerApi" ScopeGuid="e07b140f-d468-41af-90e8-625d15ef5bd9" Version="V1">
                   <uix:NApplicationCard.Body>
                     <ActivityAction x:TypeArguments="x:Object">
                       <ActivityAction.Argument>
                         <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                       </ActivityAction.Argument>
-                      <Sequence DisplayName="실행" sap:VirtualizedContainerService.HintSize="844.8,1344" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                      <Sequence DisplayName="실행" sap:VirtualizedContainerService.HintSize="1314.4,1656.8" sap2010:WorkflowViewState.IdRef="Sequence_7">
                         <Sequence.Variables>
                           <Variable x:TypeArguments="sd:DataTable" Default="[New System.Data.DataTable]" Name="ExtractDataTable" />
                           <Variable x:TypeArguments="x:String" Name="DefaultString" />
@@ -311,17 +339,16 @@
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <ui:MaximizeWindow Window="{x:Null}" DisplayName="Maximize Window" sap:VirtualizedContainerService.HintSize="803.2,22.4" sap2010:WorkflowViewState.IdRef="MaximizeWindow_4" />
-                        <uix:NCheckState Exists="{x:Null}" DisplayName="'좋아요' 목록 없는 경우 예외처리" sap:VirtualizedContainerService.HintSize="803.2,697.6" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="e07b140f-d468-41af-90e8-625d15ef5bd9" Timeout="10" Version="V1">
+                        <ui:MaximizeWindow Window="{x:Null}" DisplayName="Maximize Window" sap:VirtualizedContainerService.HintSize="1272.8,22.4" sap2010:WorkflowViewState.IdRef="MaximizeWindow_4" />
+                        <uix:NCheckState Exists="{x:Null}" DisplayName="Check App State 'Something went'" sap:VirtualizedContainerService.HintSize="1272.8,1010.4" sap2010:WorkflowViewState.IdRef="NCheckState_4" ScopeIdentifier="e07b140f-d468-41af-90e8-625d15ef5bd9" Version="V1">
                           <uix:NCheckState.IfExists>
-                            <Sequence DisplayName="타겟이 나타남" sap:VirtualizedContainerService.HintSize="375.2,281.6" sap2010:WorkflowViewState.IdRef="Sequence_21">
+                            <Sequence DisplayName="타겟이 나타남" sap:VirtualizedContainerService.HintSize="375.2,281.6" sap2010:WorkflowViewState.IdRef="Sequence_42">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="333.6,85.6" sap2010:WorkflowViewState.IdRef="MessageBox_6" Text="[&quot;타겟 없음&quot;]" />
-                              <Assign sap:VirtualizedContainerService.HintSize="333.6,61.6" sap2010:WorkflowViewState.IdRef="Assign_8">
+                              <Assign sap:VirtualizedContainerService.HintSize="333.6,61.6" sap2010:WorkflowViewState.IdRef="Assign_11">
                                 <Assign.To>
                                   <OutArgument x:TypeArguments="x:Int32">[likes_flag]</OutArgument>
                                 </Assign.To>
@@ -329,36 +356,69 @@
                                   <InArgument x:TypeArguments="x:Int32">0</InArgument>
                                 </Assign.Value>
                               </Assign>
+                              <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="333.6,85.6" sap2010:WorkflowViewState.IdRef="MessageBox_9" Text="[&quot;Removed tweet&quot;]" />
                             </Sequence>
                           </uix:NCheckState.IfExists>
                           <uix:NCheckState.IfNotExists>
-                            <Sequence DisplayName="타겟이 나타나지 않음" sap:VirtualizedContainerService.HintSize="375.2,479.2" sap2010:WorkflowViewState.IdRef="Sequence_22">
+                            <Sequence DisplayName="타겟이 나타나지 않음" sap:VirtualizedContainerService.HintSize="844.8,792" sap2010:WorkflowViewState.IdRef="Sequence_43">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[likesDT]" DelayBefore="1" DisplayName="Extract Table Data" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column0' Name='accountName'&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column1' Name='url'&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column2' Name='accountId'&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;row exact='1'&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;/row&gt;&lt;column exact='1' name='Column0' attr='text' name2='Column1' attr2='href'&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='span' idx='1' /&gt;&lt;webctrl tag='span' idx='1' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column2' attr='text'&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='span' idx='1' /&gt;&lt;/column&gt;&lt;/extract&gt;" ExtractSimilar="True" sap:VirtualizedContainerService.HintSize="333.6,157.6" sap2010:WorkflowViewState.IdRef="NExtractData_7" LimitExtractionTo="Rows" MaximumResults="0" ScopeIdentifier="e07b140f-d468-41af-90e8-625d15ef5bd9" Version="V1">
-                                <uix:NExtractData.Target>
-                                  <uix:TargetAnchorable DesignTimeRectangle="594, 228, 729, 2838" FriendlyName="'snowflower@nov1_snFollo…'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;section&amp;gt;div&amp;gt;div' parentid='layers' tag='DIV' /&gt;" Guid="9a49b15b-bb68-4ef9-8c23-c15a833a9d63" InformativeScreenshot="afc8655632aeb4177b734aafe33466fc.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Home / Twitter' /&gt;" SearchSteps="Selector" />
-                                </uix:NExtractData.Target>
-                              </uix:NExtractData>
-                              <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="333.6,85.6" sap2010:WorkflowViewState.IdRef="MessageBox_7" Text="[&quot;좋아요 스크래핑 완료&quot;]" />
-                              <Assign sap:VirtualizedContainerService.HintSize="333.6,61.6" sap2010:WorkflowViewState.IdRef="Assign_9">
-                                <Assign.To>
-                                  <OutArgument x:TypeArguments="x:Int32">[likes_flag]</OutArgument>
-                                </Assign.To>
-                                <Assign.Value>
-                                  <InArgument x:TypeArguments="x:Int32">1</InArgument>
-                                </Assign.Value>
-                              </Assign>
+                              <uix:NCheckState Exists="{x:Null}" DisplayName="'좋아요' 목록 없는 경우 예외처리" sap:VirtualizedContainerService.HintSize="803.2,697.6" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="e07b140f-d468-41af-90e8-625d15ef5bd9" Timeout="10" Version="V1">
+                                <uix:NCheckState.IfExists>
+                                  <Sequence DisplayName="타겟이 나타남" sap:VirtualizedContainerService.HintSize="375.2,281.6" sap2010:WorkflowViewState.IdRef="Sequence_21">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="333.6,85.6" sap2010:WorkflowViewState.IdRef="MessageBox_6" Text="[&quot;No one likes this tweet&quot;]" />
+                                    <Assign sap:VirtualizedContainerService.HintSize="333.6,61.6" sap2010:WorkflowViewState.IdRef="Assign_8">
+                                      <Assign.To>
+                                        <OutArgument x:TypeArguments="x:Int32">[likes_flag]</OutArgument>
+                                      </Assign.To>
+                                      <Assign.Value>
+                                        <InArgument x:TypeArguments="x:Int32">0</InArgument>
+                                      </Assign.Value>
+                                    </Assign>
+                                  </Sequence>
+                                </uix:NCheckState.IfExists>
+                                <uix:NCheckState.IfNotExists>
+                                  <Sequence DisplayName="타겟이 나타나지 않음" sap:VirtualizedContainerService.HintSize="375.2,479.2" sap2010:WorkflowViewState.IdRef="Sequence_22">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[likesDT]" DelayBefore="1" DisplayName="Extract Table Data" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured'&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column0' Name='accountId'&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column1' Name='url'&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column2' Name='accountName'&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;row exact='1'&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;/row&gt;&lt;column exact='1' name='Column0' attr='text' name2='Column1' attr2='href'&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='span' idx='1' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column2' attr='text'&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='span' idx='1' /&gt;&lt;webctrl tag='span' idx='1' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="333.6,157.6" sap2010:WorkflowViewState.IdRef="NExtractData_7" MaximumResults="0" ScopeIdentifier="e07b140f-d468-41af-90e8-625d15ef5bd9" Version="V1">
+                                      <uix:NExtractData.Target>
+                                        <uix:TargetAnchorable DesignTimeRectangle="594, 228, 729, 1908" FriendlyName="'.@z85Y5jBUHXIPnPRFollow…'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;section&amp;gt;div&amp;gt;div' parentid='layers' tag='DIV' /&gt;" Guid="29e190df-dcc4-4d2b-8b20-913b3af423e5" InformativeScreenshot="61fc19fc2df138a252c3752ad27ac77e.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='(1) Home / Twitter' /&gt;" SearchSteps="Selector" />
+                                      </uix:NExtractData.Target>
+                                    </uix:NExtractData>
+                                    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="333.6,85.6" sap2010:WorkflowViewState.IdRef="MessageBox_7" Text="[&quot;Likes scrapping success&quot;]" />
+                                    <Assign sap:VirtualizedContainerService.HintSize="333.6,61.6" sap2010:WorkflowViewState.IdRef="Assign_9">
+                                      <Assign.To>
+                                        <OutArgument x:TypeArguments="x:Int32">[likes_flag]</OutArgument>
+                                      </Assign.To>
+                                      <Assign.Value>
+                                        <InArgument x:TypeArguments="x:Int32">1</InArgument>
+                                      </Assign.Value>
+                                    </Assign>
+                                  </Sequence>
+                                </uix:NCheckState.IfNotExists>
+                                <uix:NCheckState.Target>
+                                  <uix:TargetAnchorable BrowserURL="https://twitter.com/siheunghenhja/status/1479329214931546114/likes" DesignTimeRectangle="759, 269, 75, 23" ElementType="Text" FriendlyName="'No items'" FullSelectorArgument="&lt;webctrl aaname='No items' parentid='layers' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='No items' parentid='layers' tag='SPAN' type='' check:text='No items' /&gt;" Guid="d20835d9-4901-494d-9e2f-3da72604b7db" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAE8AAAAbCAYAAAA9K9JnAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAIiSURBVGhD7ZYxS1xBFEb9j6nthFQW2wiSQhALSRHETru0Ke3SWAXEwsI2hQQESRO0WssJZ9mP3P1y5+3bnQVdmAOPZebduffOmXniTumsTZfXQJfXQJfXQJfXQJfXQJfXwJvK+/P8Uj4eHJfd/cPy8+HXfHZ7WJB3c3dfPuxNBjfz7er7xjb7+PS7TI4+zwQiUkynr+Xk7PLdC03l8Xy5+DqfXWST8mrQxzbcxv/k0TSnjkDGTpf3j1Qev3xK/jlBTR5rdGt5srUZ3PBPp+ezT5Wc5I55ePwrYBzfey3luf5xO8utONXR31rNsyfHa2htJJVHccnwxjN5zBHLGpHNZUR5IvYRIYbYGK+5KDAeguprTusV631mNSTbD6kqD9hYJirOqSnmI1kTGavIq817Dxr7wTP2A5UYxdb2wxpfOyhPieLmXJ6PI0PvxCryslioCYgbBfrx20Mucmqt5xpiUB5QEOP8ahxjKOINCfL5aTmZkKwPbZJ8tWcT8kB75vE+IkvlKbmKvrU8j81olSeII94PRyyVB2qGxS7Px5Ghd2KsPCC2dlAR9dsqL0Iuvwij5AHJecf/gDFGjdJYZOxNWUVetgHQDZGAFnnEZDWynKPlxSvsMVnBWhNOJk+N1g4k1tdclJJtFMbIy/JlczBaHvA+kwd6p8cL1cjkgeTzaGOCcazl61vkCa+R7WdBXmc1urwGurwGurwGurwGury1KeUvCHBNtrMpZRwAAAAASUVORK5CYII=" InformativeScreenshot="cc8724b25844911b84d5f3037592e392.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Home / Twitter' /&gt;" SearchSteps="FuzzySelector" />
+                                </uix:NCheckState.Target>
+                              </uix:NCheckState>
                             </Sequence>
                           </uix:NCheckState.IfNotExists>
                           <uix:NCheckState.Target>
-                            <uix:TargetAnchorable BrowserURL="https://twitter.com/siheunghenhja/status/1479329214931546114/likes" DesignTimeRectangle="759, 269, 75, 23" ElementType="Text" FriendlyName="'No items'" FullSelectorArgument="&lt;webctrl aaname='No items' parentid='layers' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='No items' parentid='layers' tag='SPAN' type='' check:text='No items' /&gt;" Guid="d20835d9-4901-494d-9e2f-3da72604b7db" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAE8AAAAbCAYAAAA9K9JnAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAIiSURBVGhD7ZYxS1xBFEb9j6nthFQW2wiSQhALSRHETru0Ke3SWAXEwsI2hQQESRO0WssJZ9mP3P1y5+3bnQVdmAOPZebduffOmXniTumsTZfXQJfXQJfXQJfXQJfXQJfXwJvK+/P8Uj4eHJfd/cPy8+HXfHZ7WJB3c3dfPuxNBjfz7er7xjb7+PS7TI4+zwQiUkynr+Xk7PLdC03l8Xy5+DqfXWST8mrQxzbcxv/k0TSnjkDGTpf3j1Qev3xK/jlBTR5rdGt5srUZ3PBPp+ezT5Wc5I55ePwrYBzfey3luf5xO8utONXR31rNsyfHa2htJJVHccnwxjN5zBHLGpHNZUR5IvYRIYbYGK+5KDAeguprTusV631mNSTbD6kqD9hYJirOqSnmI1kTGavIq817Dxr7wTP2A5UYxdb2wxpfOyhPieLmXJ6PI0PvxCryslioCYgbBfrx20Mucmqt5xpiUB5QEOP8ahxjKOINCfL5aTmZkKwPbZJ8tWcT8kB75vE+IkvlKbmKvrU8j81olSeII94PRyyVB2qGxS7Px5Ghd2KsPCC2dlAR9dsqL0Iuvwij5AHJecf/gDFGjdJYZOxNWUVetgHQDZGAFnnEZDWynKPlxSvsMVnBWhNOJk+N1g4k1tdclJJtFMbIy/JlczBaHvA+kwd6p8cL1cjkgeTzaGOCcazl61vkCa+R7WdBXmc1urwGurwGurwGurwGury1KeUvCHBNtrMpZRwAAAAASUVORK5CYII=" InformativeScreenshot="cc8724b25844911b84d5f3037592e392.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Home / Twitter' /&gt;" SearchSteps="FuzzySelector" />
+                            <uix:TargetAnchorable BrowserURL="https://twitter.com/c_rev_h/status/1497119815313/likes" DesignTimeRectangle="812, 555, 315, 23" ElementType="Text" FriendlyName="'Something went'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;span' parentid='layers' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' parentid='layers' tag='SPAN' aaname='Something went wrong. Try reloading.' check:text='Something went wrong. Try reloading.' /&gt;" Guid="568d3b33-7364-4733-9387-b5a601ed1662" ImageBase64="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" InformativeScreenshot="9a5c348d801e34ab889aff9e11c932c4.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='(3) Home / Twitter' /&gt;" SearchSteps="FuzzySelector" />
                           </uix:NCheckState.Target>
                         </uix:NCheckState>
-                        <If Condition="[likes_flag = 1]" sap:VirtualizedContainerService.HintSize="803.2,449.6" sap2010:WorkflowViewState.IdRef="If_4">
+                        <If Condition="[likes_flag = 1]" sap:VirtualizedContainerService.HintSize="1272.8,449.6" sap2010:WorkflowViewState.IdRef="If_4">
                           <If.Then>
                             <Sequence DisplayName="likesDT가 존재하는 경우" sap:VirtualizedContainerService.HintSize="375.2,259.2" sap2010:WorkflowViewState.IdRef="Sequence_37">
                               <sap:WorkflowViewStateService.ViewState>
@@ -368,12 +428,8 @@
                               </sap:WorkflowViewStateService.ViewState>
                               <ui:InvokeCode ContinueOnError="{x:Null}" Code="tmpDT.Merge(likesDT)" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="333.6,164.8" sap2010:WorkflowViewState.IdRef="InvokeCode_4">
                                 <ui:InvokeCode.Arguments>
-                                  <InOutArgument x:TypeArguments="sd:DataTable" x:Key="tmpDT">
-                                    <mva:VisualBasicReference x:TypeArguments="sd:DataTable" ExpressionText="tmpDT" />
-                                  </InOutArgument>
-                                  <InArgument x:TypeArguments="sd:DataTable" x:Key="likesDT">
-                                    <mva:VisualBasicValue x:TypeArguments="sd:DataTable" ExpressionText="likesDT" />
-                                  </InArgument>
+                                  <InOutArgument x:TypeArguments="sd:DataTable" x:Key="tmpDT">[tmpDT]</InOutArgument>
+                                  <InArgument x:TypeArguments="sd:DataTable" x:Key="likesDT">[likesDT]</InArgument>
                                 </ui:InvokeCode.Arguments>
                               </ui:InvokeCode>
                             </Sequence>
@@ -400,7 +456,7 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                 </uix:NApplicationCard>
-                <If sap2010:Annotation.AnnotationText="" Condition="[tmpDT.Columns.Contains(“sourceId”) = False]" DisplayName="tmpDT에 sourceId 존재 여부 확인" sap:VirtualizedContainerService.HintSize="878.4,500.8" sap2010:WorkflowViewState.IdRef="If_1">
+                <If sap2010:Annotation.AnnotationText="" Condition="[tmpDT.Columns.Contains(“sourceId”) = False]" DisplayName="tmpDT에 sourceId 존재 여부 확인" sap:VirtualizedContainerService.HintSize="1348,500.8" sap2010:WorkflowViewState.IdRef="If_1">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -426,7 +482,7 @@
                     </Sequence>
                   </If.Else>
                 </If>
-                <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[tmpDT]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="878.4,273.6" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+                <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[tmpDT]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="1348,273.6" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
                   <ui:ForEachRow.Body>
                     <ActivityAction x:TypeArguments="sd:DataRow">
                       <ActivityAction.Argument>
@@ -450,18 +506,14 @@
                     </ActivityAction>
                   </ui:ForEachRow.Body>
                 </ui:ForEachRow>
-                <ui:InvokeCode ContinueOnError="{x:Null}" Code="fetchDT.Merge(tmpDT)" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="878.4,164.8" sap2010:WorkflowViewState.IdRef="InvokeCode_2">
+                <ui:InvokeCode ContinueOnError="{x:Null}" Code="fetchDT.Merge(tmpDT)" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="1348,164.8" sap2010:WorkflowViewState.IdRef="InvokeCode_2">
                   <ui:InvokeCode.Arguments>
-                    <InArgument x:TypeArguments="sd:DataTable" x:Key="tmpDT">
-                      <mva:VisualBasicValue x:TypeArguments="sd:DataTable" ExpressionText="tmpDT" />
-                    </InArgument>
-                    <InOutArgument x:TypeArguments="sd:DataTable" x:Key="fetchDT">
-                      <mva:VisualBasicReference x:TypeArguments="sd:DataTable" ExpressionText="fetchDT" />
-                    </InOutArgument>
+                    <InArgument x:TypeArguments="sd:DataTable" x:Key="tmpDT">[tmpDT]</InArgument>
+                    <InOutArgument x:TypeArguments="sd:DataTable" x:Key="fetchDT">[fetchDT]</InOutArgument>
                   </ui:InvokeCode.Arguments>
                 </ui:InvokeCode>
-                <j:DataTableToJson DataTable1="[fetchDT]" DisplayName="Data table to json" sap:VirtualizedContainerService.HintSize="878.4,80.8" sap2010:WorkflowViewState.IdRef="DataTableToJson_4" JsonString="[JsonString]" />
-                <Assign sap:VirtualizedContainerService.HintSize="878.4,60" sap2010:WorkflowViewState.IdRef="Assign_5">
+                <j:DataTableToJson DataTable1="[fetchDT]" DisplayName="Data table to json" sap:VirtualizedContainerService.HintSize="1348,80.8" sap2010:WorkflowViewState.IdRef="DataTableToJson_4" JsonString="[JsonString]" />
+                <Assign sap:VirtualizedContainerService.HintSize="1348,60" sap2010:WorkflowViewState.IdRef="Assign_5">
                   <Assign.To>
                     <OutArgument x:TypeArguments="x:String">[OutputArguments]</OutArgument>
                   </Assign.To>
@@ -469,7 +521,7 @@
                     <InArgument x:TypeArguments="x:String">[JsonString]</InArgument>
                   </Assign.Value>
                 </Assign>
-                <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="878.4,62.4" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[OutputArguments]" />
+                <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="1348,62.4" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[OutputArguments]" />
               </Sequence>
             </ActivityAction>
           </ui:ForEach.Body>
