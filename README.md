@@ -1,18 +1,52 @@
 # Fedi-image-scraper
 
-## 실행 방법
-[Uipath Studio 설치방법](https://uipath.tistory.com/81)을 읽고 Studio 버전을 다운로드합니다. 혹은 `.XAML` 파일을 열기 위한 소프트웨어가 이미 설치되었다면, 파일이 열립니다.   각 폴더로 들어가 `.XAML` 파일을 두 번 클릭하면 실행이 됩니다.
+## How to get started
+ 1. Read [how to install the UiPATH Studio](https://uipath.tistory.com/81) and download the Studio version.
 
-## 디렉토리
+2. Git clone
+```
+$ git clone https://github.com/skguma/Fedi-image-scraper.git
+```
 
+3. Execute `.XAML` files in each folder (You can run it by double-clicking it)
+
+4. Please modify the following variables and arguments to suit your environment.  
+
+<br/>
+
+**AccountImage > Main.xaml > variables tab**
+```
+- "baseURL": folder path where the scraped image is stored
+
+- "imageDataExcelFile": Excel file name to store the account where the image was uploaded and the tweet data.
+
+- "savePath": Folder path where the list of accounts you scraped will be stored
+
+- "excelFileName" : Excel file name to store the scraping account list
+```
+
+<br/>
+
+**Retweets & Likes > Main.xaml > arguments tab**
+
+```
+"InputArgument" > "tweetUrl": Tweet url that you want to scrap the list of likes/retweets accounts (InputArguments is JSON Array type, and tweetUrl is the key)
+```
+
+<br/>
+
+**ReportTweet > Main.xaml > arguments tab**
+
+```
+"InputArgument" > "tweetUrl": Tweet url that you want to report on Twitter (InputArguments is JSON Array type, and tweetUrl is the key)
+```
+
+## Directory
 ### AccountImage  
-계정에서 업로드 된 이미지 수집하는 RPA  
-  
-### KeywordSearch  
-구글 키워드 검색 결과 게시글에서 제목, 출처 url, 사진 url, 계정 수집하는 RPA  
-  
-### Likes  
-트윗 좋아요 목록의 계정 ID, 계정명 스크래핑하는 RPA  
+Creating accounts list obtained from search results and Scraping image dataset
 
-### Retweets  
-리트윗 목록의 계정 ID, 계정명 스크래핑하는 RPA  
+### Retweets & Likes 
+Scraping `AccountId`, `AccountName`, `TweetUrl` of accounts that clicked likes and retweets in original tweets
+
+### ReportTweet 
+Report the accounts selected by the user on Twitter
