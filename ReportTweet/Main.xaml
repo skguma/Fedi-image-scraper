@@ -1,12 +1,13 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" this:Main.InputArguments="[&quot;[{&quot;&quot;tweetUrl&quot;&quot;:&quot;&quot;https:\/\/twitter.com\/chimdaewiyasu\/status\/1497145210891304966&quot;&quot;}]&quot;]" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="InputArguments" Type="InArgument(x:String)" />
-    <x:Property Name="outputArguments" Type="InArgument(x:String)" />
+    <x:Property Name="Email" Type="InArgument(x:String)" />
+    <x:Property Name="OutputArguments" Type="OutArgument(x:String)" />
   </x:Members>
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>901.6,3230.4</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>892.8,3237.6</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="39">
@@ -86,10 +87,9 @@
       <AssemblyReference>UiPath.Excel</AssemblyReference>
       <AssemblyReference>Newtonsoft.Json</AssemblyReference>
       <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="552,3165.6" sap2010:WorkflowViewState.IdRef="Sequence_2">
+  <Sequence sap:VirtualizedContainerService.HintSize="552,3172.8" sap2010:WorkflowViewState.IdRef="Sequence_2">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="tweetUrl" />
       <Variable x:TypeArguments="njl:JArray" Name="JArray" />
@@ -100,13 +100,13 @@
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <ui:DeserializeJsonArray DisplayName="Deserialize JSON Array" sap:VirtualizedContainerService.HintSize="510.4,60" sap2010:WorkflowViewState.IdRef="DeserializeJsonArray_1" JsonArray="[JArray]" JsonString="[InputArguments]" />
-    <ui:ForEach x:TypeArguments="njl:JObject" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="510.4,2747.2" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[JArray]">
+    <ui:ForEach x:TypeArguments="njl:JObject" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="510.4,2880" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[JArray]">
       <ui:ForEach.Body>
         <ActivityAction x:TypeArguments="njl:JObject">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="njl:JObject" Name="item" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="본문" sap:VirtualizedContainerService.HintSize="475.2,2622.4" sap2010:WorkflowViewState.IdRef="Sequence_6">
+          <Sequence DisplayName="본문" sap:VirtualizedContainerService.HintSize="475.2,2755.2" sap2010:WorkflowViewState.IdRef="Sequence_6">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="accountId" />
             </Sequence.Variables>
@@ -137,19 +137,29 @@
                 </scg:List>
               </ui:MultipleAssign.AssignOperations>
             </ui:MultipleAssign>
-            <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="433.6,85.6" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[tweetUrl]" />
-            <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Edge: 한국 법" sap:VirtualizedContainerService.HintSize="433.6,2232" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" ScopeGuid="eff7e436-da05-4fd7-93df-0d6246ec7960" Version="V1">
+            <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Edge: 한국 법" sap:VirtualizedContainerService.HintSize="433.6,2490.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" ScopeGuid="eff7e436-da05-4fd7-93df-0d6246ec7960" Version="V1">
               <uix:NApplicationCard.Body>
                 <ActivityAction x:TypeArguments="x:Object">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="실행" sap:VirtualizedContainerService.HintSize="375.2,2015.2" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                  <Sequence DisplayName="실행" sap:VirtualizedContainerService.HintSize="375.2,2273.6" sap2010:WorkflowViewState.IdRef="Sequence_8">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
+                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into '연락 가능한 이메일 주소를 입력해 주세요.'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="333.6,218.4" sap2010:WorkflowViewState.IdRef="NTypeInto_5" ScopeIdentifier="eff7e436-da05-4fd7-93df-0d6246ec7960" Text="[Email]" Version="V1">
+                      <uix:NTypeInto.Target>
+                        <uix:TargetAnchorable BrowserURL="https://help.twitter.com/ko/forms/korea-art" DesignTimeRectangle="39, 552, 878, 55" ElementType="InputBox" FriendlyName="'INPUT'" FullSelectorArgument="&lt;webctrl tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='email' aaname='' /&gt;" Guid="55455b88-e966-4cdf-9aaa-6c2933ae5a27" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAA3IAAAA7CAYAAAA+aLjYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAALnSURBVHhe7d1NSyNBFIbR+f9/bty4yEJFpcGAChJQVEhN3qG76cTWbILpC+fAhVS+9g9VVP9pAAAAlCLkAAAAijkack8vm3bTrdvl1V27WF23v8YYY4wxxhhjTjpprTRX2isNdsy3IZcf54+uu4f2vHv9/vHZttv+QwAAAE4mrZXmSnulwdJiPwXdbMjdrx/b6rZrm9e3/h0AAAB+S1osTZY2m/Ml5PLFFKDdNwAAgPNJk6XN5mJuL+SydZfqE3EAAADnlzZLox0es9wLuZzDdJwSAABgOdJoabWpMeRSeNm2AwAAYFnSatNduTHkcs1lbkgBAABgWdJqabbBGHLZqst1lwAAACxLWm16vHIMuTyAziUnAAAAy5NWS7MNxpDL08QBAABYpmmzCTkAAIAChBwAAEAxQg4AAKAYIQcAAFCMkAMAAChGyAEAABQj5AAAAIoRcgAAAMUIOQAAgGKEHAAAQDFCDgAAoBghBwAAUIyQAwAAKEbIAQAAFCPkAAAAihFyAAAAxQg5AACAYoQcAABAMUIOAACgGCEHAABQjJADAAAoRsgBAAAUI+QAAACKEXIAAADFCDkAAIBihBwAAEAxQg4AAKAYIQcAAFCMkAMAAChGyAEAABQj5AAAAIoRcgAAAMUIOQAAgGKEHAAAQDGzIXexe3O77RcAAAAsRlotzTYYQ+7y6q69f3z2KwAAAJYirZZmG4whd9Ot2/PLpl8BAACwFGm1NNtgDLmn3QfX3UO/AgAAYCnSamm2wRhyka26zetbvwIAAODc0mjTY5WxF3IpvNVt59ITAACABUibpdGmu3GxF3Jxv378v20n5gAAAM4nTZY2S6Md+hJykS+m+hyzBAAA+H1psTTZXMTFbMhFtu5yDjMFmBtSct2lXToAAIDTS2uludJeabC02OFxyqlvQ26QH+eay/xRHkCXp4kbY4wxxhhjjDndpLXSXGmvnwJucDTkAAAAWBYhBwAAUEpr/wCoVsCl3kYb7AAAAABJRU5ErkJggg==" InformativeScreenshot="f7a24e01150c5877365a31baa67d4a86.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='msedge.exe' title='한국 법' /&gt;" SearchSteps="FuzzySelector, Image">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                              <uix:Target DesignTimeRectangle="39, 522, 878, 20" ElementType="Text" FriendlyName="'연락 가능한 이메일 주소를 입력해 주세요.'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;main&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;p' isleaf='1' parentid='twtr-spa-main' tag='P' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' isleaf='1' parentid='twtr-spa-main' tag='P' aaname='연락 가능한 이메일 주소를 입력해 주세요.' check:text='연락 가능한 이메일 주소를 입력해 주세요.' /&gt;" ImageBase64="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" SearchSteps="FuzzySelector, Image" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NTypeInto.Target>
+                    </uix:NTypeInto>
                     <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into '신고하려는 계정의 사용자 아이디'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="333.6,218.4" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="eff7e436-da05-4fd7-93df-0d6246ec7960" Text="[accountId]" Version="V1">
                       <uix:NTypeInto.Target>
                         <uix:TargetAnchorable BrowserURL="https://help.twitter.com/ko/forms/korea-art" DesignTimeRectangle="239, 596, 1440, 55" ElementType="InputBox" FriendlyName="'INPUT'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='text' aaname='' /&gt;" Guid="a013cb35-8d06-4c5c-b0be-b69f211db745" ImageBase64="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" InformativeScreenshot="63570f9241dbbeea54984dd8afb1acca.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='msedge.exe' title='한국 법' /&gt;" SearchSteps="FuzzySelector, Image">
@@ -241,7 +251,7 @@
                 </ActivityAction>
               </uix:NApplicationCard.Body>
               <uix:NApplicationCard.TargetApp>
-                <uix:TargetApp Area="-9, -9, 1938, 1048" BrowserType="Edge" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAFlSURBVDhPY/j//z9FGKsgKRjOePf9Fz+yBLJ43/G7BXX7bzTOO/8wASYGUw9X6L/yzEaYAmSsP+vwBYYpZ/4zTLvwn2Hiyf8OC47ul5+078G8C4+TQPJwhfbbHp8CKUjYcH4+zPRzzz8YMCx5/J9hzTsEXnj/P/+aF5/Pv/rihGLAvNuf68AK5tz4L9C96x3IoPw9N6egaIbi9U9+VAD18KAY4LDm2lG4opWvwAYxzLyCoRmEgUAEpg9uwPm3P8L4N7z7jE0DMjbY8/E2TA+KAUDMU3f5y3xChsy786URSQ+KAQz7nnwO19/x9jY2jSAMtV0CWQ+KAUDMf+7tz6iAo58PYdP8/udfezT1EANA0QYKdYGObe8YOvf+Z5h/G0Vz/Okv26CamZE1gzCMAZLQOP/+d0Ld1W8LYXje/R+d9778CQfJQdWgaAZhdAFQ3MojYZB/2YEYXR0cYxUkBWMVJB7/ZwAAIhPbJdfNv8sAAAAASUVORK5CYII=" InformativeScreenshot="bec604e510424a646900acd9153e224d.png" Selector="&lt;html app='msedge.exe' title='한국 법'/&gt;" Url="https://help.twitter.com/ko/forms/korea-art" />
+                <uix:TargetApp Area="3, 0, 1183, 1039" BrowserType="Edge" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAFlSURBVDhPY/j//z9FGKsgKRjOePf9Fz+yBLJ43/G7BXX7bzTOO/8wASYGUw9X6L/yzEaYAmSsP+vwBYYpZ/4zTLvwn2Hiyf8OC47ul5+078G8C4+TQPJwhfbbHp8CKUjYcH4+zPRzzz8YMCx5/J9hzTsEXnj/P/+aF5/Pv/rihGLAvNuf68AK5tz4L9C96x3IoPw9N6egaIbi9U9+VAD18KAY4LDm2lG4opWvwAYxzLyCoRmEgUAEpg9uwPm3P8L4N7z7jE0DMjbY8/E2TA+KAUDMU3f5y3xChsy786URSQ+KAQz7nnwO19/x9jY2jSAMtV0CWQ+KAUDMf+7tz6iAo58PYdP8/udfezT1EANA0QYKdYGObe8YOvf+Z5h/G0Vz/Okv26CamZE1gzCMAZLQOP/+d0Ld1W8LYXje/R+d9778CQfJQdWgaAZhdAFQ3MojYZB/2YEYXR0cYxUkBWMVJB7/ZwAAIhPbJdfNv8sAAAAASUVORK5CYII=" InformativeScreenshot="7b371c5996f0a16f5e7f97b4368f1450.png" Selector="&lt;html app='msedge.exe' title='한국 법'/&gt;" Url="https://help.twitter.com/ko/forms/korea-art" />
               </uix:NApplicationCard.TargetApp>
             </uix:NApplicationCard>
           </Sequence>
@@ -250,12 +260,11 @@
     </ui:ForEach>
     <Assign sap:VirtualizedContainerService.HintSize="510.4,60" sap2010:WorkflowViewState.IdRef="Assign_1">
       <Assign.To>
-        <OutArgument x:TypeArguments="x:String">[outputArguments]</OutArgument>
+        <OutArgument x:TypeArguments="x:String">[OutputArguments]</OutArgument>
       </Assign.To>
       <Assign.Value>
         <InArgument x:TypeArguments="x:String">success</InArgument>
       </Assign.Value>
     </Assign>
-    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="510.4,85.6" sap2010:WorkflowViewState.IdRef="MessageBox_2" Text="[outputArguments]" />
   </Sequence>
 </Activity>
